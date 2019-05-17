@@ -1,0 +1,9 @@
+$borderColor: #d9d9d9;
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $borderColor;
+  font-size: 18px;
+  padding: 15px 0;
+}
