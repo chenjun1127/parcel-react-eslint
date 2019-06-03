@@ -20,7 +20,7 @@ export default class Fragments extends Component {
   render() {
     return (
       <div>
-        <h1>React 中的一个常见模式是一个组件返回多个元素。Fragments 允许你将子列表分组，而无需向 DOM 添加额外节点。</h1>
+        <h1>React 中的一个常见模式是一个组件返回多个元素。Fragments 允许你将子列表分组，而无需向 DOM 添加额外节点。我们只需要用 React.Fragment 或者简写 “尖括号” 来包裹内容就行了。</h1>
         <table className={Styles.table}>
           <Columns {...this.props} />
         </table>

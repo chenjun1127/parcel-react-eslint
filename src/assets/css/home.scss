@@ -43,4 +43,47 @@
   a.red {
     color: red;
   }
+  .bold {
+    font-weight: bold;
+  }
+  .list {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+  }
+  a {
+    color: rgb(45, 124, 226);
+  }
+  .btns {
+    button {
+      padding: 0;
+      border: 0;
+      margin: 0;
+      cursor: pointer;
+      background: rgb(45, 124, 226);
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      width: 30px;
+      text-align: center;
+    }
+    span {
+      width: 36px;
+      margin: 0 5px;
+      text-align: center;
+    }
+  }
+  .flexColumn {
+    flex-direction: column;
+    align-items: flex-start;
+    p {
+      margin-bottom: 10px;
+    }
+    button {
+      width: auto;
+    }
+  }
+}
+.mb {
+  margin-bottom: 5px;
 }
