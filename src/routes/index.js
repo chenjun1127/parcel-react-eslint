@@ -1,17 +1,18 @@
 import React from 'react';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from '../components/Header';
-import Home from '../components/Home';
-
+import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import Home from '../views/home/Home';
+import RouterViews from '../views/basic-router/Index';
+import NotFound from '../views/404/NotFound';
+import Menu from '../components/Menu';
 const Routes = () => (
-  <Router>
-    <Header name="组件" />
-    <Switch>
-      <Route path="/" component={Home} />
-      // 等同于下面
-      {/* <Route path="/home" component={Home} />
-      <Redirect path="/" to="/home" /> */}
-    </Switch>
-  </Router>
+	<Router>
+		<Menu />
+		<Switch>
+			<Route path="/home" component={Home} />
+			<Route path="/router" component={RouterViews} />
+			<Redirect path="/" exact to="/home/context" />
+			<Route component={NotFound} />
+		</Switch>
+	</Router>
 );
 export default Routes;

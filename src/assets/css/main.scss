@@ -1,10 +1,198 @@
 $borderColor: #d9d9d9;
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid $borderColor;
-  font-size: 18px;
-  padding: 15px 0;
+$mainColor: rgb(191, 203, 217);
+$acitveColor: rgb(64, 158, 255);
+.menu {
+	width: 200px;
+	height: 100%;
+	border-right: 1px solid $mainColor;
+	transition: width 0.3s;
+	background: rgb(48, 65, 86);
 }
- 
+.menubar {
+	border-bottom: 1px solid rgb(191, 203, 217);
+	height: 54px;
+	position: relative;
+	span {
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		cursor: pointer;
+		top: 50%;
+		position: absolute;
+		em {
+			@extend span;
+			width: 14px;
+			height: 2px;
+			font-size: 0;
+			line-height: 0;
+			background: $mainColor;
+			&:before,
+			&::after {
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background: $mainColor;
+				content: '';
+				display: block;
+			}
+			&:before {
+				top: -5px;
+			}
+			&:after {
+				bottom: -5px;
+			}
+		}
+	}
+}
+.menulist {
+	li {
+		a {
+			display: flex;
+			padding: 15px;
+			align-items: center;
+			color: $mainColor;
+			span {
+				width: 35px;
+				height: 100%;
+				svg {
+					width: 20px;
+					height: 20px;
+					fill: $mainColor;
+				}
+			}
+			em {
+				flex: 1;
+				font-size: 14px;
+				overflow: hidden;
+				visibility: visible;
+				display: flex;
+				align-items: center;
+				opacity: 0;
+				white-space: nowrap;
+			}
+			.visible {
+				visibility: visible;
+				opacity: 1;
+			}
+			&:hover {
+				background: #263445;
+			}
+		}
+		a.acitve {
+			color: $acitveColor;
+			background: #263445;
+			span svg {
+				fill: $acitveColor;
+			}
+		}
+	}
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid $borderColor;
+	font-size: 18px;
+	padding: 15px 0;
+}
+
+.inner {
+	display: flex;
+	flex: 1;
+}
+
+.left {
+	width: 220px;
+	border-right: 1px solid $borderColor;
+
+	a {
+		display: block;
+		padding: 15px;
+		border-bottom: 1px solid $borderColor;
+		margin: 0 15px;
+	}
+	a.activeColor {
+		color: $acitveColor;
+	}
+}
+
+.right {
+	flex: 1;
+	padding: 20px;
+	font-size: 18px;
+	h1 {
+		padding-bottom: 10px;
+		span {
+			font-weight: bold;
+		}
+	}
+	.table {
+		border-collapse: collapse;
+		border: 1px solid #000;
+		tr td {
+			border: 1px solid #000;
+			padding: 10px;
+			font-size: 14px;
+		}
+	}
+	p {
+		padding-top: 10px;
+	}
+	a.blue {
+		color: rgb(45, 124, 226);
+	}
+	a.red {
+		color: red;
+	}
+	.bold {
+		font-weight: bold;
+	}
+	.list {
+		display: flex;
+		align-items: center;
+		padding: 5px 0;
+	}
+	a {
+		color: rgb(45, 124, 226);
+	}
+	.btns {
+		button {
+			padding: 0;
+			border: 0;
+			margin: 0;
+			cursor: pointer;
+			background: rgb(45, 124, 226);
+			color: #fff;
+			padding: 10px;
+			border-radius: 5px;
+			width: 30px;
+			text-align: center;
+		}
+		span {
+			width: 36px;
+			margin: 0 5px;
+			text-align: center;
+		}
+	}
+	.flexColumn {
+		flex-direction: column;
+		align-items: flex-start;
+		p {
+			margin-bottom: 10px;
+		}
+		button {
+			width: auto;
+		}
+	}
+}
+.mb {
+	margin-bottom: 5px;
+}

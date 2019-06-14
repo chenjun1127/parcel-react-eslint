@@ -1,6 +1,6 @@
 import React, { Component, useState, useReducer, useEffect } from 'react';
-import Title from '../components/Title';
-import Styles from '../assets/css/home';
+import Title from '../../components/Title';
+import Styles from '../../assets/css/main';
 
 export default class Hooks extends Component {
   render() {

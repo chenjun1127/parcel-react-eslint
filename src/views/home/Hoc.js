@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from '../assets/css/home';
+import Styles from '../../assets/css/main';
 class HocComponent extends React.Component {
   render() {
     return (
