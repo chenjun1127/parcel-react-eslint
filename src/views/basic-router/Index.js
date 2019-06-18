@@ -3,7 +3,6 @@ import { Switch, Link, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Header from '../../components/Header';
 import Basic from '../basic-router/Basic';
-import RedirectAuth from '../../views/basic-router/RedirectAuth';
 import NotFound from '../404/NotFound';
 import styles from '../../assets/css/main';
 
@@ -14,11 +13,6 @@ export default class Index extends Component {
 				name: 'Basic',
 				path: '/router/basic',
 				component: Basic
-			},
-			{
-				name: 'Redirect-Auth',
-				path: '/router/redirect-auth',
-				component: RedirectAuth
 			}
 		]
 	};
@@ -41,7 +35,6 @@ export default class Index extends Component {
 						<Switch>
 							{/* <Route exact path="/router" component={Basic} /> */}
 							<Route path="/router/basic" component={Basic} />
-							<Route path="/router/redirect-auth" component={RedirectAuth} />
 							<Route component={NotFound} />
 						</Switch>
 					</div>
